@@ -1,0 +1,41 @@
+﻿@model Task1_1.Models.GuestResponse
+@{
+    Layout=null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Form</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="~/css/StyleSheet.css" />
+</head>
+<body>
+    <div class="panel panel-success">
+        <div class="panel panel-heading text-center"><h3>Форма регистрации</h3></div>
+        <div class="panel-body">
+            <form class="p-a-1" asp-action="Form" method="post">
+                <div asp-validation-summary="All"></div>
+                <div class="form-group">
+                    <label asp-for="Name">Ваше имя:</label>
+                    <input class="form-control" asp-for="Name" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="Email">Ваша почта:</label>
+                    <input class="form-control" asp-for="Email" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="Phone">Ваш номер телефона:</label>
+                    <input class="form-control" asp-for="Phone" />
+                </div>
+                <div class="text-center">
+                    <button class="btn btn-primary" type="submit">Сохранить</button>
+                </div>
+                <div class="text-center">
+                    <button class="btn btn-primary" asp-action="Home">Отмена</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
